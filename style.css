@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 80vw;
 }
 
 
@@ -13,8 +14,8 @@ body {
 }
 
 .board {
-    width: 50rem;
-    height: 50rem;
+    width: 40rem;
+    height: 40rem;
     display: grid;
 }
 
