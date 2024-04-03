@@ -1,10 +1,24 @@
 let color = "black";
 let boardColor = "white";
+let click = false;
 
 
 document.addEventListener("DOMContentLoaded", () => {
     createBoard(32);
     console.log("hi")
+
+    document.querySelector("body").addEventListener("click", function (e) {
+        console.log(e);
+        if (e.target.tagName != "BUTTON") {
+            click = !click;
+            let draw = document.querySelector("#draw");
+            if(click) {
+                draw.innerHTML = "Now you can Draw";
+            } else {
+                draw.innerHTML = "You are not allowed to Draw"
+            }
+        }
+    });
 })
 
 
@@ -42,10 +56,12 @@ function reset() {
 
 
 function colorDiv() {
-    if (color === "random") {
-        this.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
-    } else {
-        this.style.backgroundColor = "black"
+    if (click) {
+        if (color === "random") {
+            this.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
+        } else {
+            this.style.backgroundColor = "black"
+        }
     }
 }
 
