@@ -13,8 +13,8 @@ body {
 }
 
 .board {
-    width: 960px;
-    height: 960px;
+    width: 50rem;
+    height: 50rem;
     display: grid;
 }
 
