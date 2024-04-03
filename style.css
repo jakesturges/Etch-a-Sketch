@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.board {
+    width: 960px;
+    height: 960px;
+    display: grid;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+input[type=text] {
+    border: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+  }
